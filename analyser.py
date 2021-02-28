@@ -106,32 +106,3 @@ class Analyser(Thread):
             # bot.send_photo(rd[i][0], img, caption=string,
             #                reply_markup=markup)
             print('Signal sent')
-
-# if __name__ == '__main__':
-    # rd = read_users()
-    # img = open('chart.jpg', 'rb')
-    # for i in range(len(rd)):
-    #     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    #     mrk = types.InlineKeyboardButton(text="Check")
-    #     markup.add(mrk)
-
-    #     # bot.send_photo(523359893, img, caption='sdsd', reply_markup=markup)
-    #     bot.send_photo(rd[i][0], img, caption='test',
-    #                    reply_markup=markup)
-
-    # markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    # mrk = types.InlineKeyboardButton(text="Check")
-    # markup.add(mrk)
-    # data = read_data()
-    # rd = read_users()
-    # img = open('chart.jpg', 'rb')
-    # string = data[0][1] + ' МСК \n' + 'Обнаружен повышенный объем! \n'
-    # string += 'Краткосрочный рост объема составил ' + \
-    #     data[1][1] + ' % \n'
-    # for i in range(len(rd)):
-    #     try:
-    #         bot.send_photo(rd[i][0], img, caption=string,
-    #                        reply_markup=markup)
-    #         print('Signal sent')
-    #     except:
-    #         print('Trouble in sending to ' + str(rd[i][0]))
