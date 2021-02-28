@@ -20,18 +20,18 @@ class Analyser(Thread):
             f = self.highest_change(5, 'fall')
             vol_raise = self.compare(h, h-1, 5)
             data = [
-                ['Время сигнала', self.time_fmt(stockdata[h][0])],
-                ['Возросший объем (%)',
+                ['Время', self.time_fmt(stockdata[h][0])],
+                ['Разница объема (%)',
                  vol_raise],
-                ['Количество валюты', float(stockdata[h][5]) -
-                 float(stockdata[h-1][5])],
-                ['Объем до', stockdata[h-1][5]],
-                ['Объем после', stockdata[h][5]],
-                ['Разница объемов торогов на текущий момент (%)', self.compare(
-                 l, l-1, 5)],
-                ['Объем сейчас', stockdata[l][5]],
-                ['Объем на прошлой свечи', stockdata[l-1][5]],
-                ['Разница цены на текущий момент (%)', self.compare(
+                # ['Количество валюты', float(stockdata[h][5]) -
+                #  float(stockdata[h-1][5])],
+                # ['Объем до', stockdata[h-1][5]],
+                # ['Объем после', stockdata[h][5]],
+                # ['Разница объемов торогов на текущий момент (%)', self.compare(
+                #  l, l-1, 5)],
+                # ['Объем сейчас', stockdata[l][5]],
+                # ['Объем на прошлой свечи', stockdata[l-1][5]],
+                ['Разница цены (%)', self.compare(
                  l, l-1, 4)],
                 ['Последняя цена', stockdata[l][4]],
                 # ['Highest volume fall %', self.compare(f, f-1, 5)],
@@ -40,7 +40,7 @@ class Analyser(Thread):
                 # ['Time_f', self.time_fmt(stockdata[f][0])],
                 # ['F_Volume_a', stockdata[f-1][5]],
                 # ['F_Volume_b', stockdata[f][5]],
-                ['Количество сделок на текущую свечу', stockdata[l-1][8]],
+                # ['Количество сделок на текущую свечу', stockdata[l-1][8]],
                 ['Свеча', settings['candle']],
                 ['Период', settings['period']]
             ]
