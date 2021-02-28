@@ -12,6 +12,7 @@ def sm(ms, text, nomarkup=False):
         markup.add(mrk)
         bot.send_message(ms.chat.id, text, reply_markup=markup)
 
+
 class ChatbotClass(Thread):
     def __init__(self):
         Thread.__init__(self)

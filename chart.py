@@ -1,5 +1,5 @@
 import plotly.graph_objects as go
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 import time
 import pandas as pd
 from datetime import datetime
@@ -7,6 +7,7 @@ from plotly.subplots import make_subplots
 import requests
 from threading import Thread
 import plotly.graph_objs as go
+# import pyautogui
 
 
 class Chart(Thread):
@@ -68,7 +69,13 @@ def chart_gen():
     ))
 
     fig.update(layout_xaxis_rangeslider_visible=False)
+    # fig.write_html("chart.html")
     fig.write_image("chart.png")
+    # img_bytes = fig.to_image(format="png")
+    # fig.show()
+
+    # screen = pyautogui.screenshot('chart.png')
+    # pyautogui.screenshot('chart.png', region=(60, 120, 730, 510))
 
     print('...ChartGen...')
 
